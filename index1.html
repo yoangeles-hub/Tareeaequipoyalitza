@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurante Sabores del Caribe - Reserva Fácil</title>
+  <link rel="stylesheet" href="styles1.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="banner-sdlg">
+  <span>:v SEGUIDORES DE LA GRASA (SDLG) - GRASA APROVED :v</span>
+</div>
+
+<header class="header-nav">
+  <nav class="navbar">
+    <div class="logo"><span class="logo-icon">🌴</span> Sabores del Caribe</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#menu">Menú</a></li>
+      <li><a href="#reserva" class="active-link">Reservas</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()" aria-label="Abrir menú">☰</button>
+  </nav>
+</header>
+
+<section class="hero-section">
+  <div class="hero-overlay">
+    <h1>Una Experiencia Culinaria Inolvidable</h1>
+    <p>Sabores auténticos, ingredientes frescos y la calidez del Caribe en tu mesa.</p>
+  </div>
+</section>
+
+<main class="contenedor-principal">
+  <section class="reserva" id="reserva">
+    <div class="reserva-header">
+      <span class="subtitulo">RESERVACIÓN EN LÍNEA</span>
+      <h2>Reserva tu Mesa</h2>
+      <p>Garantiza tu lugar en nuestra mesa de forma rápida y sencilla.</p>
+    </div>
+
+    <form id="formReserva" onsubmit="return validarReserva(event)">
+      <div class="campo">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" required placeholder="Ej. Juan Pérez">
+      </div>
+
+      <div class="campo">
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" required placeholder="Ej. 9981234567">
+      </div>
+
+      <div class="campo">
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" required>
+      </div>
+
+      <div class="campo">
+        <label for="personas">Número de personas (1 a 10):</label>
+        <input type="number" id="personas" min="1" max="10" required placeholder="1-10">
+      </div>
+
+      <div class="campo">
+        <label for="claveMembresia">Contraseña de membresía:</label>
+        <input type="password" id="claveMembresia" required placeholder="Ingresa tu clave">
+      </div>
+
+      <button type="submit" id="btnReservar" onmouseover="cambiarTextoBoton(true)" onmouseleave="cambiarTextoBoton(false)">
+        Confirmar reserva
+      </button>
+    </form>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>&copy; 2026 Restaurante Sabores del Caribe. Todos los derechos reservados.</p>
+</footer>
+
+<script src="script1.js"></script>
+</body>
+</html>
